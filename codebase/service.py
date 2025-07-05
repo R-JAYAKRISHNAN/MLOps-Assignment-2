@@ -1,14 +1,21 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
+import os
 import joblib
 import mlflow
 import pandas as pd
 
 app = FastAPI()
-model = joblib.load("../codebase/model.joblib")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, "model.joblib")
+model = joblib.load(model_path)
 
 class InputText(BaseModel):
     review: str
+
+app.get("/")
+def root():
+    return {"message": "API is up and running!"}
 
 @app.get("/best_model_parameter")
 def get_best_params():
