@@ -14,11 +14,16 @@ from sklearn.pipeline import Pipeline
 import mlflow
 import mlflow.sklearn
 import joblib
+import json
 
 
-reviews = load_files("../data/imdb", categories=["pos", "neg"])
-X, y = reviews.data, reviews.target
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+train_data = load_files("../data/train", categories=["pos", "neg"])
+test_data = load_files("../data/test", categories=["pos", "neg"])
+X_train, y_train = train_data.data, train_data.target
+X_test, y_test = test_data.data, test_data.target
+
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
 pipeline = Pipeline([
     ('tfidf', TfidfVectorizer()),
     ('clf', LogisticRegression())
@@ -36,4 +41,9 @@ with mlflow.start_run():
     mlflow.log_metric("accuracy", grid.best_score_)
 
     joblib.dump(grid.best_estimator_, "../codebase/model.joblib")
+    
+    with open("../codebase/best_model_params.json", "w") as f:
+        json.dump(grid.best_params_, f, indent=2)
+
     mlflow.sklearn.log_model(grid.best_estimator_, "model")
+
