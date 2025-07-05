@@ -1,6 +1,9 @@
 """
 Author: R Jayakrishnan
 Enrollment No: MT24AAI066
+
+Trivendra Kumar Sahu
+Enroll - MT24AAI006
 """
 
 from sklearn.datasets import load_files
