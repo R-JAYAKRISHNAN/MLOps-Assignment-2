@@ -5,7 +5,7 @@ FROM python:3.10-slim
 # Maintainer and Labels
 LABEL maintainer="Trivendra Kumar Sahu, R Jayakrishnan"
 LABEL version="1.0"
-LABEL description="MLOps Assignment 2 - FastAPI service with ML model serving"
+LABEL description="MLOps Assignment 2 (Team 5)- FastAPI service with ML model serving"
 
 # Set working directory
 WORKDIR /app
