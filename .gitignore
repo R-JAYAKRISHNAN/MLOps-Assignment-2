@@ -1,0 +1,6 @@
+# Ignore data folder
+data/
+
+# Other ignores
+__pycache__/
+*.log
