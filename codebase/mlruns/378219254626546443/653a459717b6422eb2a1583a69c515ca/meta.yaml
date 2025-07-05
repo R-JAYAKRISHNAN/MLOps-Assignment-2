@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/HP/PycharmProjects/MLOps/codebase/mlruns/378219254626546443/653a459717b6422eb2a1583a69c515ca/artifacts
+end_time: 1751703062034
+entry_point_name: ''
+experiment_id: '378219254626546443'
+lifecycle_stage: active
+run_id: 653a459717b6422eb2a1583a69c515ca
+run_name: resilient-shoat-467
+run_uuid: 653a459717b6422eb2a1583a69c515ca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751703061747
+status: 4
+tags: []
+user_id: HP

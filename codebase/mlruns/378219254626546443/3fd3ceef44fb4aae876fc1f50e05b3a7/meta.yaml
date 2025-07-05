@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/HP/PycharmProjects/MLOps/codebase/mlruns/378219254626546443/3fd3ceef44fb4aae876fc1f50e05b3a7/artifacts
+end_time: 1751703091165
+entry_point_name: ''
+experiment_id: '378219254626546443'
+lifecycle_stage: active
+run_id: 3fd3ceef44fb4aae876fc1f50e05b3a7
+run_name: blushing-hare-286
+run_uuid: 3fd3ceef44fb4aae876fc1f50e05b3a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751703082954
+status: 3
+tags: []
+user_id: HP
